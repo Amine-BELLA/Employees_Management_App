@@ -34,14 +34,15 @@ function Content() {
             </div>
             {
                 !loading &&
-                <div style={{"width": "70%", "textAlign" : "center", "justifyContent": "center", "alignItems" : "center", "margin" : "4rem auto"}}>
-                    <h5 style={{"marginBottom" : "1rem"}}>List of Employees</h5>
+                <div style={{ "width": "70%", "textAlign": "center", "justifyContent": "center", "alignItems": "center", "margin": "4rem auto" }}>
+                    <h5 style={{ "marginBottom": "1rem" }}>List of Employees</h5>
                     <table class="table table-dark table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">First name</th>
                                 <th scope="col">Last name</th>
                                 <th scope="col">Email</th>
+                                <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -52,6 +53,10 @@ function Content() {
                                             <td>{JSON.stringify(element.firstName)}</td>
                                             <td>{JSON.stringify(element.lastName)}</td>
                                             <td>{JSON.stringify(element.email)}</td>
+                                            <td>
+                                                <button style={{"marginRight" : "1rem"}} type="button" class="btn btn-primary">Modify</button>
+                                                <button type="button" class="btn btn-danger">Delete</button>
+                                            </td>
                                         </tr>
 
                                     );
