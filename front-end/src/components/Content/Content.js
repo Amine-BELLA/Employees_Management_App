@@ -25,6 +25,18 @@ function Content() {
             })
     }
 
+    async function handleDelete(e) {
+        const parent = e.target.parentNode;
+        const ID = parent.parentNode.id;
+        await fetch('http://localhost:8080/delete/' + ID, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        });
+       showEmployees();
+    }
+
 
     return (
         <div>
@@ -49,7 +61,7 @@ function Content() {
                             {
                                 data.map(element => {
                                     return (
-                                        <tr key={element.id}>
+                                        <tr id={element.id}>
                                             <td>{JSON.stringify(element.firstName)}</td>
                                             <td>{JSON.stringify(element.lastName)}</td>
                                             <td>{JSON.stringify(element.email)}</td>
