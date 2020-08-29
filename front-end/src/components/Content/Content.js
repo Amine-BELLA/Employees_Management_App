@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import {Nav}
+import { NavLink } from 'react-router-dom';
 
 function Content() {
     const [backEnd, setBackEnd] = useState({
@@ -29,7 +29,7 @@ function Content() {
     return (
         <div>
             <div style={{ "margin": "2rem auto", "textAlign": "center" }}>
-                <button style={{ "marginRight": "4rem" }} type="button" class="btn btn-outline-success">Add Employee</button>
+                <a href='/add-employee'><button style={{ "marginRight": "4rem" }} type="button" class="btn btn-outline-success">Add Employee</button></a>
                 <button onClick={showEmployees} type="button" class="btn btn-outline-primary">Show List</button>
             </div>
             {
@@ -54,8 +54,8 @@ function Content() {
                                             <td>{JSON.stringify(element.lastName)}</td>
                                             <td>{JSON.stringify(element.email)}</td>
                                             <td>
-                                                <button style={{"marginRight" : "1rem"}} type="button" class="btn btn-primary">Modify</button>
-                                                <button type="button" class="btn btn-danger">Delete</button>
+                                                <button style={{ "marginRight": "1rem" }} type="button" class="btn btn-primary">Modify</button>
+                                                <button onClick={handleDelete} type="button" class="btn btn-danger">Delete</button>
                                             </td>
                                         </tr>
 

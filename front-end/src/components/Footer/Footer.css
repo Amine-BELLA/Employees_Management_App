@@ -1,7 +1,7 @@
 .footer-container {
     width: 100%;
-    position: absolute;
-    top: 35rem;
+    position: relative;
+    top: 15rem;
     margin-top:4rem;
     text-align: center;
     color: white;
@@ -10,7 +10,7 @@
 .technologies {
     padding-top: 1rem;
     background-color : #007bfd ;
-    height : 30vh;
+    height : 40vh;
 }
 
 .technologies i {
