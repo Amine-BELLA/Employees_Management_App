@@ -34,8 +34,10 @@ function Content() {
                 'Content-Type': 'application/json',
             }
         });
-       showEmployees();
+        showEmployees();
+        console.log(parent.parentNode.text);
     }
+
 
 
     return (
@@ -66,7 +68,6 @@ function Content() {
                                             <td>{JSON.stringify(element.lastName)}</td>
                                             <td>{JSON.stringify(element.email)}</td>
                                             <td>
-                                                <button style={{ "marginRight": "1rem" }} type="button" class="btn btn-primary">Modify</button>
                                                 <button onClick={handleDelete} type="button" class="btn btn-danger">Delete</button>
                                             </td>
                                         </tr>
